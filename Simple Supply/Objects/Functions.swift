@@ -1,6 +1,6 @@
 //
 //  funcation.swift
-//  AHE Inventory App
+//  Simple Supply
 //
 //  Created by Will Gibson on 11/30/24.
 //

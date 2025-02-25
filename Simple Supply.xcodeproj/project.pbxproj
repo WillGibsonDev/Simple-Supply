@@ -16,7 +16,7 @@
 		B1054B9B2CFBC34300C5CF32 /* AddMaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1054B9A2CFBC34300C5CF32 /* AddMaterialView.swift */; };
 		B1054B9D2CFBF4DD00C5CF32 /* AddMaterialSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1054B9C2CFBF4DD00C5CF32 /* AddMaterialSheet.swift */; };
 		B1054B9F2CFD01DB00C5CF32 /* updateMaterialSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1054B9E2CFD01DB00C5CF32 /* updateMaterialSheet.swift */; };
-		B193D5C02C88F3BB00E915DA /* Inventory_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193D5BF2C88F3BB00E915DA /* Inventory_AppApp.swift */; };
+		B193D5C02C88F3BB00E915DA /* SimpleSupplyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193D5BF2C88F3BB00E915DA /* SimpleSupplyApp.swift */; };
 		B193D5C22C88F3BB00E915DA /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B193D5C12C88F3BB00E915DA /* ProductsView.swift */; };
 		B193D5C42C88F3BE00E915DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B193D5C32C88F3BE00E915DA /* Assets.xcassets */; };
 		B193D5C72C88F3BE00E915DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B193D5C62C88F3BE00E915DA /* Preview Assets.xcassets */; };
@@ -35,8 +35,8 @@
 		B1054B9A2CFBC34300C5CF32 /* AddMaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialView.swift; sourceTree = "<group>"; };
 		B1054B9C2CFBF4DD00C5CF32 /* AddMaterialSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialSheet.swift; sourceTree = "<group>"; };
 		B1054B9E2CFD01DB00C5CF32 /* updateMaterialSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateMaterialSheet.swift; sourceTree = "<group>"; };
-		B193D5BC2C88F3BB00E915DA /* AHE Inventory App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AHE Inventory App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B193D5BF2C88F3BB00E915DA /* Inventory_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_AppApp.swift; sourceTree = "<group>"; };
+		B193D5BC2C88F3BB00E915DA /* AHE Simple Supply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AHE Simple Supply.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B193D5BF2C88F3BB00E915DA /* SimpleSupplyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSupplyApp.swift; sourceTree = "<group>"; };
 		B193D5C12C88F3BB00E915DA /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		B193D5C32C88F3BE00E915DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B193D5C62C88F3BE00E915DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		B193D5B32C88F3BB00E915DA = {
 			isa = PBXGroup;
 			children = (
-				B193D5BE2C88F3BB00E915DA /* Inventory App */,
+				B193D5BE2C88F3BB00E915DA /* Simple Supply */,
 				B193D5BD2C88F3BB00E915DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,15 +99,15 @@
 		B193D5BD2C88F3BB00E915DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B193D5BC2C88F3BB00E915DA /* AHE Inventory App.app */,
+				B193D5BC2C88F3BB00E915DA /* AHE Simple Supply.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B193D5BE2C88F3BB00E915DA /* Inventory App */ = {
+		B193D5BE2C88F3BB00E915DA /* Simple Supply */ = {
 			isa = PBXGroup;
 			children = (
-				B193D5BF2C88F3BB00E915DA /* Inventory_AppApp.swift */,
+				B193D5BF2C88F3BB00E915DA /* SimpleSupplyApp.swift */,
 				B1CCEAA82CF03B93006F7C8C /* MainView.swift */,
 				B1054B8F2CFBB69F00C5CF32 /* Materials View */,
 				B103CFE92CBDB09B003A9A9B /* Products View */,
@@ -116,7 +116,7 @@
 				B19FA8E82CBE3E72009ABFE6 /* MockData.swift */,
 				B193D5C52C88F3BE00E915DA /* Preview Content */,
 			);
-			path = "Inventory App";
+			path = "Simple Supply";
 			sourceTree = "<group>";
 		};
 		B193D5C52C88F3BE00E915DA /* Preview Content */ = {
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B193D5BB2C88F3BB00E915DA /* AHE Inventory App */ = {
+		B193D5BB2C88F3BB00E915DA /* AHE Simple Supply */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B193D5CA2C88F3BE00E915DA /* Build configuration list for PBXNativeTarget "AHE Inventory App" */;
+			buildConfigurationList = B193D5CA2C88F3BE00E915DA /* Build configuration list for PBXNativeTarget "AHE Simple Supply" */;
 			buildPhases = (
 				B193D5B82C88F3BB00E915DA /* Sources */,
 				B193D5B92C88F3BB00E915DA /* Frameworks */,
@@ -142,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = "AHE Inventory App";
+			name = "AHE Simple Supply";
 			productName = "AHE Inventory App";
-			productReference = B193D5BC2C88F3BB00E915DA /* AHE Inventory App.app */;
+			productReference = B193D5BC2C88F3BB00E915DA /* AHE Simple Supply.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B193D5B72C88F3BB00E915DA /* Build configuration list for PBXProject "Inventory App" */;
+			buildConfigurationList = B193D5B72C88F3BB00E915DA /* Build configuration list for PBXProject "Simple Supply" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -175,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B193D5BB2C88F3BB00E915DA /* AHE Inventory App */,
+				B193D5BB2C88F3BB00E915DA /* AHE Simple Supply */,
 			);
 		};
 /* End PBXProject section */
@@ -207,7 +207,7 @@
 				B1054B912CFBB6AF00C5CF32 /* MaterialsView.swift in Sources */,
 				B1054B972CFBB70B00C5CF32 /* Functions.swift in Sources */,
 				B194A5AA2CBDA718007A05A1 /* Material.swift in Sources */,
-				B193D5C02C88F3BB00E915DA /* Inventory_AppApp.swift in Sources */,
+				B193D5C02C88F3BB00E915DA /* SimpleSupplyApp.swift in Sources */,
 				B1054B992CFBB7BC00C5CF32 /* AddProductSheet.swift in Sources */,
 				B1054B8E2CFBB67F00C5CF32 /* ProductCell.swift in Sources */,
 				B19FA8E92CBE3E72009ABFE6 /* MockData.swift in Sources */,
@@ -401,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B193D5B72C88F3BB00E915DA /* Build configuration list for PBXProject "Inventory App" */ = {
+		B193D5B72C88F3BB00E915DA /* Build configuration list for PBXProject "Simple Supply" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B193D5C82C88F3BE00E915DA /* Debug */,
@@ -410,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B193D5CA2C88F3BE00E915DA /* Build configuration list for PBXNativeTarget "AHE Inventory App" */ = {
+		B193D5CA2C88F3BE00E915DA /* Build configuration list for PBXNativeTarget "AHE Simple Supply" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B193D5CB2C88F3BE00E915DA /* Debug */,

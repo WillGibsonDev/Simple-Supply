@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  AHE Inventory App
+//  Simple Supply
 //
 //  Created by Will Gibson on 9/4/24.
 //

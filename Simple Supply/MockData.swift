@@ -1,6 +1,6 @@
 //
 //  MockData.swift
-//  AHE Inventory App
+//  Simple Supply
 //
 //  Created by Will Gibson on 10/15/24.
 //
