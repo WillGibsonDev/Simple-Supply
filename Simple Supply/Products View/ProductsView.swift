@@ -18,26 +18,38 @@ struct ProductsView: View {
     @State private var productToProduce: Product?
     @State private var addSheetPresented: Bool = false
     
+    @State private var isShowingCantCreateAlert = false
+    @State private var isShowingSuccessAlert = false
+    
     var body: some View {
         NavigationStack{
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 20) {
-                    Section{
-                        ForEach(products){ product in
-                            ProductCell(product: product)
-                                .onTapGesture {
-                                    productToProduce = product
-                                    produceProduct(name: productToProduce!.name, materialsNeeded: productToProduce!.materialsUsed, availableMaterials: materials)
+                    ForEach(products){ product in
+                        ProductCell(product: product)
+                            .onTapGesture {
+                                productToProduce = product
+                                let alerts = produceProduct(name: productToProduce!.name, materialsNeeded: productToProduce!.materialsUsed, availableMaterials: materials)
+                                
+                                if alerts == nil {
+                                    isShowingCantCreateAlert = true
+                                } else {
+                                    isShowingSuccessAlert = true
                                 }
-                        }
-                    } /*header: {
-                        Text("Products")
-                            .font(.largeTitle.bold())
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }*/
+                                
+                            }
+                            .alert("Not enough materials", isPresented: $isShowingCantCreateAlert){
+                                Button("Cancel", role: .cancel) { }
+                            } message: {
+                                Text("You do not have enough material to create this product.")
+                            }
+                    }
                     
                 }
-
+                .alert("Success", isPresented: $isShowingSuccessAlert) {
+                    Button("Close", role: .cancel) { }
+                }
+                
             }
             .padding(.top, 30)
             .sheet(isPresented: $addSheetPresented, content: {
