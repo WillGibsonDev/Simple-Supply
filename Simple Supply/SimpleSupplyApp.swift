@@ -12,7 +12,7 @@ import SwiftData
 struct AHE_Inventory_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            LaunchScreenView()
                 .modelContainer(for: [Material.self, Product.self, ProductMaterial.self])
         }
     }

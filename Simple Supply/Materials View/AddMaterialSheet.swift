@@ -24,7 +24,7 @@ struct AddMaterialSheet: View {
             Form {
                 TextField("Material Name", text: $name)
                     .onSubmit {
-                        if currentMaterials.contains { $0.name.lowercased() == name.lowercased() } {
+                        if currentMaterials.contains(where: { $0.name.lowercased() == name.lowercased() }) {
                             print("error, can't submit")
                         }
 

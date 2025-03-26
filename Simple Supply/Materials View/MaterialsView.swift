@@ -16,6 +16,8 @@ struct MaterialsView: View {
     //    @State private var searchTerm = ""
     @State private var materialToEdit: Material?
     
+    @State private var isShowingLowMaterialAlert = false
+    
     var body: some View {
         NavigationStack {
             
