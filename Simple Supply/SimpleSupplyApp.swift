@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+// Uses a default Model Container
 @main
 struct AHE_Inventory_AppApp: App {
     var body: some Scene {

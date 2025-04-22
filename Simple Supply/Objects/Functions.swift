@@ -6,6 +6,16 @@
 //
 
 
+/// A function to check material quantities and deduct necessary amounts.
+/// - Parameters:
+///   - name: Name of the ``Product`` being created
+///   - materialsNeeded: List of ``Material`` necessary  for creating this product, in the form of ``ProductMaterial`` objects.
+///   - availableMaterials: List of all ``Material`` objects stored in SwiftData
+/// - Returns: An optional ``Product`` object. A return of "nil" indicates that a product could not be made. A return of a Product indicates a success.
+///
+///>Note: This function does not create Alert objects seen on the UI. Those are created based on the return of this function. See ``ProductsView`` for Alert declarations. 
+///
+/// >Warning: A refactor of this funciton will be coming soon, following implementation of error types. This will better indicate what failed and where, as well as communicating this failure to the user more clearly.
 func produceProduct(name: String, materialsNeeded: [ProductMaterial], availableMaterials: [Material]) -> Product? {
     var usedMaterials: [ProductMaterial] = []
     

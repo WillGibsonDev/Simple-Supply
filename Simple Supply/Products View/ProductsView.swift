@@ -9,19 +9,30 @@ import SwiftUI
 import SwiftData
 
 
+/// View to show all products
+///
+/// Uses a rounded rectangle cell, see ``ProductCell``, to display individual products.
+///
+/// When a cell is tapped, it runs  ``produceProduct(name:materialsNeeded:availableMaterials:)``.
+///
+/// See also ``Product``
+///
 struct ProductsView: View {
     @Environment(\.modelContext) private var context
-    let columns = [GridItem(.adaptive(minimum: 250), spacing: 20)]
+    // Query for all products and all materials, as materials are necessary to create new product objects and new
     @Query var products: [Product]
     @Query var materials: [Material]
+    let columns = [GridItem(.adaptive(minimum: 250), spacing: 20)]
     
     @State private var productToProduce: Product?
     @State private var addSheetPresented: Bool = false
     
+    // State variables for showing alerts conditionally
     @State private var isShowingCantCreateAlert = false
     @State private var isShowingSuccessAlert = false
     
     var body: some View {
+        // Scroll view used in case there is a large number of products
         NavigationStack{
             ScrollView{
                 LazyVGrid(columns: columns, spacing: 20) {
@@ -38,6 +49,7 @@ struct ProductsView: View {
                                 }
                                 
                             }
+                            // failure alert
                             .alert("Not enough materials", isPresented: $isShowingCantCreateAlert){
                                 Button("Cancel", role: .cancel) { }
                             } message: {
@@ -46,6 +58,7 @@ struct ProductsView: View {
                     }
                     
                 }
+                // success alert
                 .alert("Success", isPresented: $isShowingSuccessAlert) {
                     Button("Close", role: .cancel) { }
                 }

@@ -8,14 +8,16 @@
 import SwiftUI
 import SwiftData
 
+/// Sheet view used to create a new ``Material`` object
 struct AddMaterialSheet: View {
-    
+    // Default model context
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
-    
+    // List of all materials stored in the context
     @Query var currentMaterials: [Material]
     
     @State private var name: String = ""
+    // Units variable (WIP)
 //    @State private var units: String = ""
     @State private var quantity: Int = 0
     
@@ -25,6 +27,7 @@ struct AddMaterialSheet: View {
                 TextField("Material Name", text: $name)
                     .onSubmit {
                         if currentMaterials.contains(where: { $0.name.lowercased() == name.lowercased() }) {
+                            //TODO: Print statements need replaced with Alerts on UI
                             print("error, can't submit")
                         }
 
@@ -54,6 +57,7 @@ struct AddMaterialSheet: View {
         do {
             try context.save()
         } catch {
+            //TODO: Update all print statements to alerts on UI
             print("Error Saving")
         }
         dismiss()
