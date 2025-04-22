@@ -5,6 +5,7 @@ This is a simple, generic, inventory tracking app designed for the iPad that can
 
 Created over the course of a few hours, the project is fairly simple, but I am continuing to add more work. 
 ## Features to be added:
+- [ ] Utilized LocalizedError
 - [ ] Notifications for when materials are getting low
 - [ ] Expanded ability to customize materials
 	- [ ] Different units of measurement (with conversions?)
@@ -15,7 +16,7 @@ Created over the course of a few hours, the project is fairly simple, but I am c
 	- [ ] Use images instead of random colors for the blocks
 	- [ ] Cost to create product (based on cost of materials)
 	- [ ] Include time and labor in cost?
-- [ ] Loading Screen
+- [x] Loading Screen
 - [ ] iPhone layout
 - [ ] Reporting tools?
 - [ ] Widgets?
