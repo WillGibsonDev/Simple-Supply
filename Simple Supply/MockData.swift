@@ -7,6 +7,8 @@
 
 import SwiftData
 
+// Mock data used in testing. Currently not applied to any distribution of the app.
+
 func setupSampleData(modelContext: ModelContext) {
     let wood = Material(name: "Wood", quantity: 50)
     let nails = Material(name: "Nails", quantity: 100)

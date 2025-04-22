@@ -8,7 +8,10 @@
 import SwiftUI
 import SwiftData
 
-// Define a helper model for Material usage in Products
+
+/// A helper class to combine a ``Material`` with a specific ``requiredQuantity``
+///
+/// This is used when creating ``Product`` objects, to denote how much of any given Material is used to create said Product
 @Model
 class ProductMaterial {
     var material: Material

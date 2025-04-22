@@ -8,10 +8,13 @@
 import SwiftUI
 import SwiftData
 
+/// Sheet view to add a ``Material`` object used by the ``Product``.
 struct AddMaterialView: View {
     @Query var availableMaterials: [Material]
     @Binding var selectedMaterial: Material?
     @Binding var selectedQuantity: Int
+    
+    // This is AddProductSheet.addMaterial()
     var onAdd: () -> Void
     
     @Environment(\.dismiss) private var dismiss
