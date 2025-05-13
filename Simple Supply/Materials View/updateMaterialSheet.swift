@@ -24,19 +24,19 @@ struct updateMaterialSheet: View {
                 }
                 Spacer()
                 // Delete option is available, but can cause problems.
-                Button("Delete Item") {
-                    context.delete(material)
-                    
-                    do {
-                        try context.save()
-                    } catch {
-                        //TODO: Print statements need updated with alert errors on UI
-                        print("Can't save after delete")
-                    }
-                    
-                    dismiss()
-                    
-                }
+//                Button("Delete Item") {
+//                    context.delete(material)
+//                    
+//                    do {
+//                        try context.save()
+//                    } catch {
+//                        //TODO: Print statements need updated with alert errors on UI
+//                        print("Can't save after delete")
+//                    }
+//                    
+//                    dismiss()
+//                    
+//                }
                     .tint(.red)
                     .fontWeight(.semibold)
                     .padding(.bottom, 30)

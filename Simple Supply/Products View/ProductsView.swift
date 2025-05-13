@@ -60,7 +60,7 @@ struct ProductsView: View {
                 }
                 // success alert
                 .alert("Success", isPresented: $isShowingSuccessAlert) {
-                    Button("Close", role: .cancel) { }
+                    Button("Ok", role: .cancel) { }
                 }
                 
             }

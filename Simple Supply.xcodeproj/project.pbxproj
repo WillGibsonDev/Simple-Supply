@@ -78,6 +78,7 @@
 				B1054B942CFBB6F600C5CF32 /* ProductMaterial.swift */,
 				B1054B922CFBB6DA00C5CF32 /* Product.swift */,
 				B1054B962CFBB70B00C5CF32 /* Functions.swift */,
+				B11FFB9C2DB862E500B4DC0D /* Errors.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -95,7 +96,6 @@
 		B193D5B32C88F3BB00E915DA = {
 			isa = PBXGroup;
 			children = (
-				B11FFB9C2DB862E500B4DC0D /* Errors.swift */,
 				B193D5BE2C88F3BB00E915DA /* Simple Supply */,
 				B193D5BD2C88F3BB00E915DA /* Products */,
 			);

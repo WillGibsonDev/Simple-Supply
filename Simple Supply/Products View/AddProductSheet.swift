@@ -28,6 +28,9 @@ struct AddProductSheet: View {
     @State private var selectedMaterial: Material?
     @State private var selectedQuantity: Int = 1
     
+    @State private var currentError: SIError?
+    @State private var showingError = false
+    
     
     var body: some View {
         NavigationStack {
@@ -57,6 +60,12 @@ struct AddProductSheet: View {
                         Label("Add Material", systemImage: "plus")
                     }
                 }
+                .alert(isPresented: $showingError, error: currentError) { error in
+                    
+                } message: { error in
+                    Text(error.failureReason!)
+                }
+
             }
             .sheet(isPresented: $isAddingMaterial) {
                 AddMaterialView(
@@ -108,8 +117,8 @@ struct AddProductSheet: View {
         do {
             try context.save()
         } catch {
-            //TODO: Replace all print statements with alerts on UI
-            print("Error saving")
+            currentError = .SaveError
+            showingError = true
         }
         dismiss()
     }
